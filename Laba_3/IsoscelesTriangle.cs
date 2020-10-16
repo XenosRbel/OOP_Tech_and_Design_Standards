@@ -18,6 +18,7 @@ namespace Laba_3
         public void CalcLengthBisector()
         {
             var bisector = FindBisector(this.Side, this.AngleAtTheBase);
+
             Console.WriteLine($"Длина биссектрисы равна:\t{bisector}, " +
                 $"при угле равному:\t{this.AngleAtTheBase} (градусов)");
         }
@@ -26,7 +27,6 @@ namespace Laba_3
         {
             var basisSide = FindBasisSide(Side, AngleAtTheBase);
             var length = Math.Sqrt(Math.Pow(Side, 2) - Math.Pow((basisSide / 2), 2));
-            Console.WriteLine($"Длина высоты при сторонах равным {Side}&{basisSide} - равна:\t{length}");
         }
 
         public void DecreaseSize(double value)
