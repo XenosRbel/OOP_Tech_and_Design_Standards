@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOPT_and_DS_Tests", "OOPT_a
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba_2", "Laba_2\Laba_2.csproj", "{87ACFEEA-06AC-44EA-BF31-0CBBA4A4FC96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba_3", "Laba_3\Laba_3.csproj", "{8D44AEC6-7664-4567-ADFA-90D771EADDD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba_3", "Laba_3\Laba_3.csproj", "{8D44AEC6-7664-4567-ADFA-90D771EADDD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba_4", "Laba_4\Laba_4.csproj", "{595E7507-90FB-48C1-88EB-060F64F1412F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8D44AEC6-7664-4567-ADFA-90D771EADDD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D44AEC6-7664-4567-ADFA-90D771EADDD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D44AEC6-7664-4567-ADFA-90D771EADDD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{595E7507-90FB-48C1-88EB-060F64F1412F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595E7507-90FB-48C1-88EB-060F64F1412F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595E7507-90FB-48C1-88EB-060F64F1412F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595E7507-90FB-48C1-88EB-060F64F1412F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,8 +1,6 @@
-﻿using Laba_1;
-
-namespace Laba_3
+﻿namespace Laba_3
 {
-    public interface IIsosceles : ITriangle
+    public interface IIsosceles
     {
         double Side { get; set; }
         double AngleAtTheBase { get;set; }
