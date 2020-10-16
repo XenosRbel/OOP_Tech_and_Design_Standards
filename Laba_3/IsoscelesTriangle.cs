@@ -17,14 +17,14 @@ namespace Laba_3
 
         public void CalcLengthBisector()
         {
-            var bisector = FindBisector(this.Side, this.AngleAtTheBase);
+            var bisector = FindBisector();
             Console.WriteLine($"Длина биссектрисы равна:\t{bisector}, " +
                 $"при угле равному:\t{this.AngleAtTheBase} (градусов)");
         }
 
         public void CalculatingLengthHeights()
         {
-            var basisSide = FindBasisSide(Side, AngleAtTheBase);
+            var basisSide = FindBasisSide();
             var length = Math.Sqrt(Math.Pow(Side, 2) - Math.Pow((basisSide / 2), 2));
             Console.WriteLine($"Длина высоты при сторонах равным {Side}\t&\t{basisSide} -> равна:\t{length}");
         }
@@ -36,7 +36,7 @@ namespace Laba_3
 
         public void DefiningValuesSides()
         {
-            var basisSize = FindBasisSide(this.Side, this.AngleAtTheBase);
+            var basisSize = FindBasisSide();
             Console.WriteLine($"Две стороны равнобедренного треугольника равны:\t{this.Side}, основание:{basisSize}");
         }
 
@@ -45,22 +45,21 @@ namespace Laba_3
             this.Side *= value;
         }
 
-        private double FindBisector(double side, double angle)
+        private double FindBisector()
         {
-            return side * Math.Sin(angle);
+            double angle = Math.PI * this.AngleAtTheBase / 180.0;
+            return this.Side * Math.Sin(angle);
         }
 
-        private double FindBasisSide(double sideA, double angle)
+        private double FindBasisSide()
         {
-            return 2 * sideA * Math.Cos(angle);
+            double angle = Math.PI * this.AngleAtTheBase / 180.0;
+            return 2 * this.Side * Math.Cos(angle);
         }
-<<<<<<< HEAD
-=======
 
          public override string ToString()
         {
             return $"{this.Side}\t{this.AngleAtTheBase}";
         }
->>>>>>> 5eb0c288bb4a4213352cab271f784c74edf8c7e9
     }
 }
