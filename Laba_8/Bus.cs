@@ -1,9 +1,9 @@
 ﻿using Laba_3;
 using System;
 
-namespace Laba_5
+namespace Laba_8
 {
-    public class Bus : IRoadTransportEquipment
+    public abstract class Bus : IRoadTransportEquipment
     {
         public Bus(string name, string color, string type, int power)
         {
@@ -17,10 +17,10 @@ namespace Laba_5
         {
         }
 
-        public string Name { get ; set ; }
-        public string Color { get ; set ; }
-        public string Type { get ; set ; }
-        public int Power { get ; set ; }
+        public string Name { get; set; }
+        public string Color { get; set; }
+        public string Type { get; set; }
+        public int Power { get; set; }
 
         public virtual void OpenDoor()
         {

@@ -2,7 +2,7 @@
 
 namespace Laba_5
 {
-    class BelarussianBus : Bus
+    public class BelarussianBus : Bus
     {
         public BelarussianBus(string name, string color, string type, int power) : base(name, color, type, power)
         {
