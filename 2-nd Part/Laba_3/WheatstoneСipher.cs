@@ -10,7 +10,6 @@ namespace Laba_3
 
         private static object _lockObject = new object();
 
-        private char[] _specSymbolArr = { ' ' };
         private static char[,] _firstMatrix = new char[M, N];
         private static char[,] _secondMatrix = new char[M, N];
 
@@ -19,7 +18,6 @@ namespace Laba_3
 			lock (_lockObject)
 			{
                 var enAlphabet = Enumerable.Range('a', 'z' - 'a' + 1).Select(i => (char)i).ToList();
-                //var ruAlphabet = Enumerable.Range('А', 'я' - 'А').Select(i => (char)i).ToList();
                 var alphabet = enAlphabet.ToArray();
 
                 _firstMatrix = alphabet.Shuffle().ConvertToMatrix(M, N);
