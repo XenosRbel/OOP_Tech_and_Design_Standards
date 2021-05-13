@@ -2,7 +2,8 @@
 {
 	public interface ICar
 	{
-		EngineType EngineType { get; }
-
+		EngineType EngineType { get; set; }
+		TransmissionType TransmissionType { get; set; }
+		int SeatsCount { get; set; }
 	}
 }
