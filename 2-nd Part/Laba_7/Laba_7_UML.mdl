@@ -1,0 +1,1938 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	204)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"60A3CC30014E"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    charSet    	204
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"60A3CC300150"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "Пользователь"
+		quid       	"60A3D24B00F7"
+		stereotype 	"Actor")
+	    (object UseCase "Создать группу пользователей"
+		quid       	"60A3D2600270")
+	    (object UseCase "Управлять аккаунтом"
+		quid       	"60A3D27A0194")
+	    (object UseCase "Изменять настройки профиля"
+		quid       	"60A3D2870381")
+	    (object UseCase "Отправлять широковещательные сообщения"
+		quid       	"60A3D2A20084")
+	    (object UseCase "Настраивать приватность"
+		quid       	"60A3D2C800C6"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"60A3D3070262"
+			stereotype 	"extend"
+			supplier   	"Use Case View::Управлять аккаунтом"
+			quidu      	"60A3D27A0194")))
+	    (object UseCase "Изменить номер мобильного телефона"
+		quid       	"60A3D2DF0020"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"60A3D30A01AD"
+			stereotype 	"extend"
+			supplier   	"Use Case View::Управлять аккаунтом"
+			quidu      	"60A3D27A0194")))
+	    (object UseCase "Удалить аккаунт"
+		quid       	"60A3D2EF03B2"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"60A3D30D0069"
+			stereotype 	"extend"
+			supplier   	"Use Case View::Управлять аккаунтом"
+			quidu      	"60A3D27A0194")))
+	    (object UseCase "Изменить статус профиля"
+		quid       	"60A3D34B01A3"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"60A3D366018E"
+			stereotype 	"extend"
+			supplier   	"Use Case View::Изменять настройки профиля"
+			quidu      	"60A3D2870381")))
+	    (object UseCase "Изменить фотографию профиля"
+		quid       	"60A3D357025A"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"60A3D36C0345"
+			stereotype 	"extend"
+			supplier   	"Use Case View::Изменять настройки профиля"
+			quidu      	"60A3D2870381")))
+	    (object UseCase "Создание беседы с пользователем"
+		quid       	"60A3D3810339")
+	    (object UseCase "Отправить текстовое сообщение"
+		quid       	"60A3D3CC01DE"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"60A3D4340342"
+			stereotype 	"extend"
+			supplier   	"Use Case View::Создание беседы с пользователем"
+			quidu      	"60A3D3810339")
+		    (object Dependency_Relationship
+			quid       	"60A3D563000F"
+			supplier   	"Use Case View::Создать группу пользователей"
+			quidu      	"60A3D2600270")))
+	    (object UseCase "Отправить Эмодзи"
+		quid       	"60A3D3DB01EE"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"60A3D4320255"
+			stereotype 	"extend"
+			supplier   	"Use Case View::Создание беседы с пользователем"
+			quidu      	"60A3D3810339")
+		    (object Dependency_Relationship
+			quid       	"60A3D55F02A5"
+			supplier   	"Use Case View::Создать группу пользователей"
+			quidu      	"60A3D2600270")))
+	    (object UseCase "Отправить Аудио\\Видео\\Фото"
+		quid       	"60A3D3F20384"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"60A3D430016A"
+			stereotype 	"extend"
+			supplier   	"Use Case View::Создание беседы с пользователем"
+			quidu      	"60A3D3810339")
+		    (object Dependency_Relationship
+			quid       	"60A3D55D0147"
+			supplier   	"Use Case View::Создать группу пользователей"
+			quidu      	"60A3D2600270")))
+	    (object UseCase "Поделиться местоположением"
+		quid       	"60A3D41D0092"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"60A3D42E009E"
+			stereotype 	"extend"
+			supplier   	"Use Case View::Создание беседы с пользователем"
+			quidu      	"60A3D3810339")
+		    (object Dependency_Relationship
+			quid       	"60A3D5540035"
+			stereotype 	"extend"
+			supplier   	"Use Case View::Создать группу пользователей"
+			quidu      	"60A3D2600270")))
+	    (object Association "$UNNAMED$0"
+		quid       	"60A3D303029F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"60A3D304032D"
+			supplier   	"Use Case View::Управлять аккаунтом"
+			quidu      	"60A3D27A0194"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"60A3D3040330"
+			supplier   	"Use Case View::Пользователь"
+			quidu      	"60A3D24B00F7")))
+	    (object Association "$UNNAMED$3"
+		quid       	"60A3D3700352"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"60A3D371018F"
+			supplier   	"Use Case View::Изменять настройки профиля"
+			quidu      	"60A3D2870381"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"60A3D3710192"
+			supplier   	"Use Case View::Пользователь"
+			quidu      	"60A3D24B00F7")))
+	    (object Association "$UNNAMED$6"
+		quid       	"60A3D3720293"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"60A3D373005B"
+			supplier   	"Use Case View::Отправлять широковещательные сообщения"
+			quidu      	"60A3D2A20084"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"60A3D373005D"
+			supplier   	"Use Case View::Пользователь"
+			quidu      	"60A3D24B00F7")))
+	    (object Association "$UNNAMED$9"
+		quid       	"60A3D3740214"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"60A3D37500B1"
+			supplier   	"Use Case View::Создать группу пользователей"
+			quidu      	"60A3D2600270"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"60A3D37500B3"
+			supplier   	"Use Case View::Пользователь"
+			quidu      	"60A3D24B00F7")))
+	    (object Association "$UNNAMED$12"
+		quid       	"60A3D3C60238"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"60A3D3C70086"
+			supplier   	"Use Case View::Создание беседы с пользователем"
+			quidu      	"60A3D3810339"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"60A3D3C70088"
+			supplier   	"Use Case View::Пользователь"
+			quidu      	"60A3D24B00F7"))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"60A3CC310192"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::Настраивать приватность" @1
+			location   	(1812, 1674)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(1812, 1812)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Настраивать приватность")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D2C800C6"
+			height     	118)
+		    (object UseCaseView "Use Case View::Изменить номер мобильного телефона" @2
+			location   	(1725, 1997)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1725, 2135)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Изменить номер мобильного телефона")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D2DF0020"
+			height     	118)
+		    (object UseCaseView "Use Case View::Удалить аккаунт" @3
+			location   	(1661, 2321)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(1661, 2459)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Удалить аккаунт")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D2EF03B2"
+			height     	118)
+		    (object UseCaseView "Use Case View::Управлять аккаунтом" @4
+			location   	(1094, 1643)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(1094, 1781)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Управлять аккаунтом")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D27A0194"
+			height     	118)
+		    (object DependencyView "" @5
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @6
+			    Parent_View 	@5
+			    location   	(1468, 1719)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.460352
+			    height     	62
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"60A3D3070262"
+			client     	@1
+			supplier   	@4
+			vertices   	(list Points
+			    (1700, 1667)
+			    (1202, 1645))
+			line_style 	0)
+		    (object DependencyView "" @7
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @8
+			    Parent_View 	@7
+			    location   	(1258, 2052)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.652967
+			    height     	136
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"60A3D30D0069"
+			client     	@3
+			supplier   	@4
+			vertices   	(list Points
+			    (1612, 2263)
+			    (1230, 1806))
+			line_style 	0)
+		    (object DependencyView "" @9
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @10
+			    Parent_View 	@9
+			    location   	(1461, 1908)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.409451
+			    height     	53
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"60A3D30A01AD"
+			client     	@2
+			supplier   	@4
+			vertices   	(list Points
+			    (1625, 1939)
+			    (1288, 1750))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Изменить статус профиля" @11
+			location   	(1791, 1385)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@11
+			    location   	(1791, 1523)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Изменить статус профиля")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D34B01A3"
+			height     	118)
+		    (object UseCaseView "Use Case View::Изменить фотографию профиля" @12
+			location   	(1804, 1116)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@12
+			    location   	(1804, 1254)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Изменить фотографию профиля")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D357025A"
+			height     	118)
+		    (object UseCaseView "Use Case View::Изменять настройки профиля" @13
+			location   	(1119, 1287)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@13
+			    location   	(1119, 1425)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Изменять настройки профиля")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D2870381"
+			height     	118)
+		    (object DependencyView "" @14
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @15
+			    Parent_View 	@14
+			    location   	(1509, 1377)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.367564
+			    height     	35
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"60A3D366018E"
+			client     	@11
+			supplier   	@13
+			vertices   	(list Points
+			    (1681, 1366)
+			    (1227, 1300))
+			line_style 	0)
+		    (object DependencyView "" @16
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @17
+			    Parent_View 	@16
+			    location   	(1358, 1182)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.506357
+			    height     	40
+			    orientation 	1)
+			line_color 	3342489
+			quidu      	"60A3D36C0345"
+			client     	@12
+			supplier   	@13
+			vertices   	(list Points
+			    (1512, 1186)
+			    (1227, 1256))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Отправлять широковещательные сообщения" @18
+			location   	(1125, 966)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@18
+			    location   	(1125, 1104)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Отправлять широковещательные сообщения")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D2A20084"
+			height     	118)
+		    (object UseCaseView "Use Case View::Создать группу пользователей" @19
+			location   	(2556, 753)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(2556, 891)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Создать группу пользователей")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D2600270"
+			height     	118)
+		    (object ClassView "Class" "Use Case View::Пользователь" @20
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(492, 1409)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@20
+			    location   	(492, 1569)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	325
+			    justify    	0
+			    label      	"Пользователь")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"60A3D24B00F7"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @21
+			location   	(766, 1513)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"60A3D303029F"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @22
+				Parent_View 	@21
+				location   	(274, 104)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"60A3D304032D"
+				client     	@21
+				supplier   	@4
+				vertices   	(list Points
+				    (766, 1513)
+				    (984, 1597))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @23
+				Parent_View 	@21
+				location   	(274, 104)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"60A3D3040330"
+				client     	@21
+				supplier   	@20
+				vertices   	(list Points
+				    (766, 1513)
+				    (549, 1429))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @24
+			location   	(698, 1366)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"60A3D3700352"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @25
+				Parent_View 	@24
+				location   	(206, -43)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"60A3D371018F"
+				client     	@24
+				supplier   	@13
+				vertices   	(list Points
+				    (698, 1366)
+				    (847, 1337))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @26
+				Parent_View 	@24
+				location   	(206, -43)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"60A3D3710192"
+				client     	@24
+				supplier   	@20
+				vertices   	(list Points
+				    (698, 1366)
+				    (549, 1395))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$6" @27
+			location   	(701, 1260)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"60A3D3720293"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @28
+				Parent_View 	@27
+				location   	(209, -149)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"60A3D373005B"
+				client     	@27
+				supplier   	@18
+				vertices   	(list Points
+				    (701, 1260)
+				    (854, 1155))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @29
+				Parent_View 	@27
+				location   	(209, -149)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"60A3D373005D"
+				client     	@27
+				supplier   	@20
+				vertices   	(list Points
+				    (701, 1260)
+				    (549, 1365))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$9" @30
+			location   	(1410, 1114)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"60A3D3740214"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @31
+				Parent_View 	@30
+				location   	(918, -295)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"60A3D37500B1"
+				client     	@30
+				supplier   	@19
+				vertices   	(list Points
+				    (1410, 1114)
+				    (2272, 841))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @32
+				Parent_View 	@30
+				location   	(918, -295)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"60A3D37500B3"
+				client     	@30
+				supplier   	@20
+				vertices   	(list Points
+				    (1410, 1114)
+				    (549, 1388))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Создание беседы с пользователем" @33
+			location   	(1028, 694)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@33
+			    location   	(1028, 832)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Создание беседы с пользователем")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D3810339"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$12" @34
+			location   	(718, 1105)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"60A3D3C60238"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$13" @35
+				Parent_View 	@34
+				location   	(226, -304)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"60A3D3C70086"
+				client     	@34
+				supplier   	@33
+				vertices   	(list Points
+				    (718, 1105)
+				    (888, 883))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$14" @36
+				Parent_View 	@34
+				location   	(226, -304)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"60A3D3C70088"
+				client     	@34
+				supplier   	@20
+				vertices   	(list Points
+				    (718, 1105)
+				    (548, 1328))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Отправить текстовое сообщение" @37
+			location   	(1759, 137)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@37
+			    location   	(1759, 275)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Отправить текстовое сообщение")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D3CC01DE"
+			height     	118)
+		    (object UseCaseView "Use Case View::Отправить Эмодзи" @38
+			location   	(1773, 397)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@38
+			    location   	(1773, 535)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Отправить Эмодзи")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D3DB01EE"
+			height     	118)
+		    (object UseCaseView "Use Case View::Отправить Аудио\\\\Видео\\\\Фото" @39
+			location   	(1779, 615)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@39
+			    location   	(1779, 753)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Отправить Аудио\\Видео\\Фото")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D3F20384"
+			height     	118)
+		    (object UseCaseView "Use Case View::Поделиться местоположением" @40
+			location   	(1785, 872)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@40
+			    location   	(1785, 1010)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Поделиться местоположением")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"60A3D41D0092"
+			height     	118)
+		    (object DependencyView "" @41
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @42
+			    Parent_View 	@41
+			    location   	(1379, 897)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.500000
+			    height     	120
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"60A3D42E009E"
+			client     	@40
+			supplier   	@33
+			vertices   	(list Points
+			    (1675, 843)
+			    (1136, 717))
+			line_style 	0)
+		    (object DependencyView "" @43
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @44
+			    Parent_View 	@43
+			    location   	(1502, 671)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.317988
+			    height     	30
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"60A3D430016A"
+			client     	@39
+			supplier   	@33
+			vertices   	(list Points
+			    (1668, 624)
+			    (1136, 678))
+			line_style 	0)
+		    (object DependencyView "" @45
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @46
+			    Parent_View 	@45
+			    location   	(1216, 455)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.707561
+			    height     	152
+			    orientation 	1)
+			line_color 	3342489
+			quidu      	"60A3D4320255"
+			client     	@38
+			supplier   	@33
+			vertices   	(list Points
+			    (1597, 466)
+			    (1136, 648))
+			line_style 	0)
+		    (object DependencyView "" @47
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @48
+			    Parent_View 	@47
+			    location   	(1393, 563)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.500000
+			    height     	120
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"60A3D4340342"
+			client     	@37
+			supplier   	@33
+			vertices   	(list Points
+			    (1543, 300)
+			    (1099, 635))
+			line_style 	0)
+		    (object DependencyView "" @49
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @50
+			    Parent_View 	@49
+			    location   	(2290, 657)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.755409
+			    height     	132
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"60A3D5540035"
+			client     	@40
+			supplier   	@19
+			vertices   	(list Points
+			    (1893, 851)
+			    (2445, 766))
+			line_style 	0)
+		    (object DependencyView "" @51
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"60A3D55D0147"
+			client     	@39
+			supplier   	@19
+			vertices   	(list Points
+			    (1887, 631)
+			    (2445, 729))
+			line_style 	0)
+		    (object DependencyView "" @52
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"60A3D55F02A5"
+			client     	@38
+			supplier   	@19
+			vertices   	(list Points
+			    (1948, 475)
+			    (2446, 700))
+			line_style 	0)
+		    (object DependencyView "" @53
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"60A3D563000F"
+			client     	@37
+			supplier   	@19
+			vertices   	(list Points
+			    (1971, 300)
+			    (2480, 694))
+			line_style 	0)))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"60A3CC30014F"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"60A3CC300151"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"60A3CC31019A"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"60A3CC300151"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"60A3CC310191"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"60A3CC30014F")
+    process_structure 	(object Processes
+	quid       	"60A3CC300152"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"60A3CC300154"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"propertyId"
+		value      	"809135966")
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Project"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"project"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TableCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ViewCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DomainCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SPPackageCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TriggerCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IndexCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ConstraintCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"StoreProcedureCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"PrimaryKeyCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ForeignKeyCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"JoinCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TableSpaceCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"cONTAINERCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TablePrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ViewPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DomainPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TriggerPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IndexPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ConstraintPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"StoreProcedurePrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"PrimaryKeyPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ForeignKeyPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TableSpacePrefix"
+			value      	"")))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Module-Spec"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDatabase"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TargetDatabase"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Location"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsTableSpace"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TableSpaceType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDeault"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"BufferPool"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ExtentSize"
+			value      	1)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"PrefetchSize"
+			value      	1)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"PageSize"
+			value      	4)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ManagedBy"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ContainerList"
+			value      	"")))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Category"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmSchema"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmDomainPackage"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsSchema"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDomainPackage"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsRootSchema"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsRootDomainPackage"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsSchemaPackage"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DatabaseID"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DBMS"
+			value      	"")))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Class"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsTable"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsView"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDomain"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsSPPackage"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Synonymns"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TableSpaceID"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SourceId"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SourceType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"CorrelationName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SelectClause"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsUpdateable"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"CheckOption"
+			value      	"None")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsSnapShot"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDistinct"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"PersistToServer"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsPackage"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsPackageWrapped"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsPackageBodyWrapped"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Attribute"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Ordinal"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsIdentity"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsUnique"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"NullsAllowed"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Length"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Scale"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ColumnType"
+			value      	"Native")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ForBitData"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DefaultValueType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DefaultValue"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SourceId"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SourceType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"OID"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Association"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsRelationship"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SourceId"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SourceType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"RIMethod"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ParentUpdateRule"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ParentUpdateRuleName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ParentDeleteRule"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ParentDeleteRuleName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ChildInsertRestrict"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ChildInsertRestrictName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ChildMultiplicity"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ChildMultiplicityName"
+			value      	"")))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Role"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ConstraintName"
+			value      	"")))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Operation"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsConstraint"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ConstraintType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsIndex"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsTrigger"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsStoredProcedure"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsCluster"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TableSpace"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"FillFactor"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"KeyList"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"CheckPredicate"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsUnique"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DeferalMode"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"InitialCheckTime"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TriggerType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsInsertEvent"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsUpdateEvent"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDeleteEvent"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"RefOldTable"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"RefNewTable"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"RefOldRow"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"RefNewRow"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsRow"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"WhenClause"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Language"
+			value      	"SQL")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ProcType"
+			value      	"Procedure")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDeterministic"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ParameterStyle"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ReturnedNull"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ExternalName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Length"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Scale"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ForBitData"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DefaultValue"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DefaultValueType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsWrapped"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Parameter"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsInParameter"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsOutParameter"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Ordinal"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Length"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Scale"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ForBitData"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DefaultValueType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DefaultValue"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"OperationID"
+			value      	"")))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Data Modeler Communicator"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"framework"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Model Integrator"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"TopLink"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Version Control"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"60A3CC300153"))
